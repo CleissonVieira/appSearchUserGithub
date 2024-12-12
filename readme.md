@@ -38,26 +38,27 @@ Siga as etapas abaixo para configurar o ambiente e executar o projeto:
 
 ## Telas do Desafio
 
-### Tela 1: Home
-![Tela de login](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen1.PNG)
+### Tela 1: Home e Tela 1.0: Home - Busca vazia
 
-### Tela 1.0: Home - Busca vazia
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen2.PNG)
+<div style="display: flex; gap: 50px;">
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen1.PNG" alt="Tela Home" width="380"/>
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen2.PNG" alt="Tela Home - Busca vazia" width="380"/>
+</div>
 
-### Tela 1.1: Home - Usuário não existe
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen3.PNG)
+### Tela 1.1: Home - Usuário não existe e Tela 1.2: Home - Usuário encontrado com sucesso
+<div style="display: flex; gap: 10px;">
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen3.PNG" alt="Tela Home - Usuário não existe" width="380"/>
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen4.PNG" alt="Tela Home - Usuário encontrado com sucesso" width="380"/>
+</div>
 
-### Tela 1.2: Home - Usuário encontrado com sucesso
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen4.PNG)
+### Tela 2: Perfil do usuário e Tela 3: Componente Load
+<div style="display: flex; gap: 10px;">
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen5.PNG" alt="Tela Perfil do usuário" width="380"/>
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen6.PNG" alt="Tela Componente Load" width="380"/>
+</div>
 
-### Tela 2: Perfil do usuário
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen5.PNG)
-
-### Tela 3: Componente Load
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen6.PNG)
-
-### Tela 4: Listagem de repositórios
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen7.PNG)
-
-### Tela 5: Detalhamento de um repositório
-![Tela do dashboard](https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen8.PNG)
+### Tela 4: Listagem de repositórios e Tela 5: Detalhamento de um repositório
+<div style="display: flex; gap: 10px;">
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen7.PNG" alt="Tela Listagem de repositórios" width="380"/>
+  <img src="https://github.com/CleissonVieira/appSearchUserGithub/blob/master/assets/screenshot/screen8.PNG" alt="Tela Detalhamento de um repositório" width="380"/>
+</div>
