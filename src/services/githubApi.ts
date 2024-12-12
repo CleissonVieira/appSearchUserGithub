@@ -1,43 +1,33 @@
-const BASE_URL = 'https://api.github.com';
+import { BASE_URL } from "./config";
+import { handleResponse } from './apiUtils';
+import { Repository, User } from "../interfaces";
 
-export const fetchUser = async (username: string) => {
+export const fetchUser = async (username: string): Promise<User> => {
   try {
     const response = await fetch(`${BASE_URL}/users/${username}`);
-    if (!response.ok) {
-      throw new Error('Usuário não encontrado');
-    }
-    const userData = await response.json();
-    return userData;
+    return handleResponse(response, 'User not found')
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching user:', error);
     throw error;
   }
 };
 
-export const fetchRepositories = async (username: string) => {
+export const fetchRepositories = async (username: string): Promise<Repository[]> => {
   try {
     const response = await fetch(`${BASE_URL}/users/${username}/repos`);
-    if (!response.ok) {
-      throw new Error('Repositórios não encontrados');
-    }
-    const repositories = await response.json();
-    return repositories;
+    return handleResponse(response, 'Repositories not found')
   } catch (error) {
-    console.error('Erro ao buscar repositórios:', error);
+    console.error('Error fetching repositories:', error);
     throw error;
   }
 };
 
-export const fetchRepository = async (fullname: string) => {
+export const fetchRepository = async (fullname: string): Promise<Repository> => {
   try {
     const response = await fetch(`${BASE_URL}/repos/${fullname}`);
-    if (!response.ok) {
-      throw new Error('Repositório não encontrado');
-    }
-    const repository = await response.json();
-    return repository;
+    return handleResponse(response, 'Repository not found')
   } catch (error) {
-    console.error(`Erro ao buscar o repositório ${fullname}:`, error);
+    console.error(`Error fetching repository ${fullname}:`, error);
     throw error;
   }
 };

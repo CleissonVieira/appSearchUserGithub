@@ -1,20 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Repository, RepositoriesState } from '../../interfaces';
 
-interface Repository {
-  id: number;
-  full_name: string;
-  name: string;
-  description: string;
-  stargazers_count: number;
-  language: string;
-  html_url: string;
-}
-
-interface RepositoryState {
-  details: Repository | null;
-}
-
-const initialState: RepositoryState = {
+const initialState: RepositoriesState = {
   details: null,
 };
 

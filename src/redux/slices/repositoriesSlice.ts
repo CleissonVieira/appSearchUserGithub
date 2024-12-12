@@ -1,25 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface Repository {
-  id: number;
-  name: string;
-  full_name: string;
-  description: string;
-  stargazers_count: number;
-  [key: string]: any; // Permitindo qualquer outro campo
-}
-
-interface RepositoriesState {
-  list: Repository[];
-  order: 'asc' | 'desc';
-}
+import { RepositoriesState, Repository } from '../../interfaces';
 
 const initialState: RepositoriesState = {
   list: [],
   order: 'desc',
 };
 
-// Função que ordena os repositórios com base na ordem de estrelas
 const sortRepositories = (repositories: Repository[], order: 'asc' | 'desc') => {
   return repositories.sort((a, b) => {
     if (order === 'asc') {
@@ -35,11 +21,11 @@ const repositorySlice = createSlice({
   initialState,
   reducers: {
     setRepositories(state, action: PayloadAction<Repository[]>) {
-      state.list = sortRepositories(action.payload, state.order);
+      state.list = sortRepositories(action.payload, state?.order ?? "asc");
     },
     setOrder(state, action: PayloadAction<'asc' | 'desc'>) {
       state.order = action.payload;
-      state.list = sortRepositories(state.list, state.order); // Reordena a lista ao alterar a ordem
+      state.list = sortRepositories(state?.list ?? [], state.order);
     },
   },
 });

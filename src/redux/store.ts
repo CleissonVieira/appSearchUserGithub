@@ -9,6 +9,7 @@ export const store = configureStore({
     repositories: repositoriesReducer,
     repository: repositoryReducer,
   },
+  devTools: process.env.NODE_ENV !== 'production',
 });
 
 export type RootState = ReturnType<typeof store.getState>;
